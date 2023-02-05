@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    min-height: 100vh;
+    background-color: #277BC0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.alert-danger {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.headline {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
 }
 
-.App-link {
-  color: #61dafb;
+.form-search {
+    margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control {
+    border-radius: 0 !important;
+}
+
+.btn-search {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFB200 !important;
+    border-radius: 0 !important;
+    width: 100%;
+    border: 0 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-search:hover {
+    background-color: #33c2aa !important;
+}
+
+.card-pokemon {
+    padding: 2rem 2rem;
+    border: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 3px 6px rgba(#000000, 0.18) !important;
+    background: hsla(186, 33%, 94%, 1);
+    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+
+}
+
+.card-pokemon .card-header {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.card-pokemon .card-body {
+    padding: 0 !important;
+}
+
+.card-pokemon .card-ability {
+    margin-bottom: 1rem;
+}
+
+.card-pokemon .card-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #40381c;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.card-pokemon .card-header {
+    background-color: transparent;
+}
+
+.card-pokemon .card-body {
+    background-color: transparent;
+
+}
+
+.card-pokemon .card-title {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-pokemon .card-img {
+    width: 30%;
+    min-width: 200px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.card-pokemon .card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+}
+
+.card-pokemon .card-info {
+    width: 50%;
+}
+
+.card-pokemon .card-base-stats {
+    width: 50%;
+}
+
+.card-pokemon .card-types-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-pokemon .card-types-wrapper div {
+    min-height: 26px;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    min-width: 80px;
+    padding: 0 1rem;
+    border-radius: 6px;
+    color: azure;
+}
+
+.card-pokemon .card-types-wrapper div:not(:first-child) {
+    margin-left: 0.5rem;
+}
+
+.normal {
+    background-color: #868482;
+}
+
+.water {
+    background-color: #39a9dc;
+}
+
+.electric {
+    background-color: #FFB200;
+
+}
+
+.fire {
+    background-color: #ff5900;
+}
+
+.poison {
+    background-color: #575687;
+}
+
+.flying {
+    background-color: #bcbbe6;
+}
+
+.grass {
+    background-color: #56c456;
+}
+
+.progress {
+    border-radius: 10px !important;
+    height: 18px !important;
+}
+
+.progress-bar {
+    background-color: #164765 !important;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    .btn-search {
+        margin-top: 1rem;
+    }
+
+    .card-pokemon .card-body {
+        flex-direction: column !important;
+    }
+
+    .card-pokemon .card-info {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-pokemon .card-base-stats {
+        width: 100%;
+    }
+
 }
